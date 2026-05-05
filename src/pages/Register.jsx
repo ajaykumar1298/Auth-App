@@ -8,7 +8,7 @@ function Register() {
     username: "",
     email: "",
     password: "",
-    role: "USER",
+    role: "ADMIN",
   });
 
   const handleRegister = async () => {
@@ -38,8 +38,11 @@ function Register() {
         username: "",
         email: "",
         password: "",
-        role: "USER",
+        role: "ADMIN",
       });
+      let data = JSON.stringify(res.data?.user);
+      localStorage.setItem("user", data);
+      navigate("/user-details");
     }
     alert(res.message);
   };
@@ -87,16 +90,7 @@ function Register() {
                 className="w-full mt-1 p-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-blue-400 text-sm"
               />
             </div>
-            <div>
-              <label className="text-gray-400 text-sm">Select User</label>
-              <select
-                className="block w-full p-2 mt-2 bg-gray-700 rounded-lg"
-                onChange={(e) => setForm({ ...form, role: e.target.value })}
-              >
-                <option value="USER">USER</option>
-                <option value="ADMIN">ADMIN</option>
-              </select>
-            </div>
+
             <button
               type="submit"
               className="w-full py-2 mt-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold "

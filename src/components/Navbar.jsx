@@ -20,7 +20,7 @@ function Navbar() {
       <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-white  bg-clip-text text-transparent">
         Auth App
       </div>
-      {user && (
+      {/* {user && (
         <div className="flex flex-row gap-4 items-center gap-4">
           <span>Hello {user.username}</span>
           <button
@@ -34,7 +34,7 @@ function Navbar() {
             Logout
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
