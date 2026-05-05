@@ -1,17 +1,84 @@
-# React + Vite
+🔐 Auth App (React + API)
+A simple authentication application built using React.js that allows users to register, login, view profile details, and logout.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+-User Registration
+-User Login
+-User Profile Page
+-Logout Functionality
+-Form Validation
+-Responsive UI using Tailwind CSS
 
-Currently, two official plugins are available:
+🛠️ Tech Stack
+-Frontend: React.js
+-Routing: React Router DOM
+-Styling: Tailwind CSS
+-API: https://api.freeapi.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+📂 Project Structure
 
-## React Compiler
+src/
+│
+├── components/
+│   └── Navbar.jsx
+│
+├── pages/
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   └── User.jsx
+│
+├── services/
+│   └── api.js
+│
+├── App.jsx
+└── main.jsx
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+⚙️ Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Auth-App" 
+1.Clone the repository
+
+git clone https://github.com/your-username/auth-app.git
+
+
+2.Navigate to project folder
+
+cd auth-app
+
+3.Install dependencies
+
+npm install
+
+4.Run the project
+
+npm run dev
+
+
+🔑 API Endpoints Used
+
+-Register → /register
+-Login → /login
+-Get Current User → /current-user
+-Logout → /logout
+
+
+Base URL:
+
+https://api.freeapi.app/api/v1/users
+
+
+⚠️ Known Issues
+
+-Password field is visible (should use type="password")
+-No token-based authentication (uses localStorage)
+-Logout API response not fully handled
+
+📌 Future Improvements
+
+-Add JWT authentication
+-Implement Protected Routes
+-Improve error handling
+-Convert project to TypeScript
+
+👨‍💻 Author
+Ajay Kumar
